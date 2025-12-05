@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4169E1;
+  --color-secondary: #F5F5F5;
+  --color-background: #FFFFFF;
+  --color-accent: #4169E1;
+  --color-text: #333333;
+}
+
+.logo-text {
+  @apply text-2xl;
+  color: var(--color-primary);
+  flex-grow: 1;
+}
+
+.nav-icon {
+  @apply w-6 h-6;
+}
+
+.nav-icon-sm {
+  @apply w-4 h-4;
+}
+
+/* this code turns the active nav to primary color */
+.active .nav-icon, .search-bar .nav-icon {
+  filter: invert(38%) sepia(81%) saturate(2477%) hue-rotate(208deg) brightness(91%) contrast(87%);
+}
+
