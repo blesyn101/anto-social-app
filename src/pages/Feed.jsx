@@ -4,6 +4,7 @@ import searchIcon from '../assets/icons/search.svg'
 import userIcon from '../assets/icons/user.svg'
 import { usePosts } from "../context/usePosts";
 import { NavLink } from 'react-router-dom'
+import DailyVerse from '../components/DailyVerse';
 
 function Feed() {
   const { posts } = usePosts();
@@ -18,12 +19,7 @@ function Feed() {
     </div>
        
        {/* Daily Scriptures */}
-       <div className="daily-scriptures bg-primary/20 rounded-xl p-3 mb-2">
-        <h2 className="title font-semibold mb-1">Today's Scripture</h2>
-        <div className="scripture">
-          <p className="">Study to show thyself approved, a workman that needed not to be ashamed but rigtly dividing te word of truth. - 2 Timothy 2:15</p>
-        </div>
-       </div>
+       <DailyVerse />
 
        {/* Main Feed */}
       {posts.map((post) => (
