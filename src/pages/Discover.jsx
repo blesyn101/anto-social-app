@@ -14,8 +14,7 @@ function Discover() {
     useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // I'm having issues fetchimg data from this address, i dont know what to do, "http://localhost:3000/api/discover"
-        const res = await axios.get("http://localhost:4000/api/discover");
+        const res = await axios.get("http://localhost:3000/api/discover");
         setPosts(res.data);
       } catch (error) {
         console.error("Error fetching posts:", error);

@@ -17,7 +17,7 @@ function App() {
         <Route path='/prayer' element={<Prayer />} />
         <Route path='/post' element={<Post />} />
         <Route path='/discover' element={<Discover />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile/:id' element={<Profile />} />
       </Routes>
       <BottomNav />
     </div>
