@@ -1,6 +1,4 @@
-import axios from 'axios' ;
-
-const API_URL = "http://localhost:3000/api/dailyverse";
+import api from '../api/api';
 
 export async function getDailyVerse() {
     const today = new Date().toISOString().split('T')[0]; // This gives date formate as YYYY-MM-DD
@@ -18,7 +16,7 @@ export async function getDailyVerse() {
 
     // 2 No cache or new day → fetch from API
     try {
-        const res = await axios.get(API_URL);
+        const res = await api.get('/api/dailyverse');
         const verseData = {
             ref: res.data?.ref || " ",
             text: res.data?.text || " ",

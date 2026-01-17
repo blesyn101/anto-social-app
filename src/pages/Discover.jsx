@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
 import DiscoverCard from '../components/DiscoverCard.jsx'
 import searchIcon from '../assets/icons/search.svg'
 import { NavLink } from 'react-router-dom'
+  import api from '../api/api.js'
+
 
 function Discover() {
   const [posts, setPosts] = useState([]);
@@ -14,7 +15,7 @@ function Discover() {
     useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/discover");
+        const res = await api.get("/api/discover");
         setPosts(res.data);
       } catch (error) {
         console.error("Error fetching posts:", error);

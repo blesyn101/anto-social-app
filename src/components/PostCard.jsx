@@ -23,8 +23,8 @@ function PostCard({name, time, content, imageUrl, postImage, likes, comments}) {
       )}
       {/* Footer */}
       <div className="flex justify-start gap-6 text-sm text-gray-500 pb-3">
-       <button className='hover:text-primary'><img src={likeIcon} className='w-5 h-5m inline-block pr-1'></img>{likes}</button>
-       <button className='hover:text-primary'><img src={commentIcon} className='w-5 h-5m inline-block pr-1'></img>{comments}</button>
+       <button className='hover:text-primary'><img src={likeIcon} className='w-5 h-5m inline-block pr-1 hover:invert-50'></img>{likes}</button>
+       <button className='hover:text-primary'><img src={commentIcon} className='w-5 h-5m inline-block pr-1 hover:invert-50'></img>{comments}</button>
 
       </div>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ProfileCard from '../components/ProfileCard'
 import DiscoverCard from '../components/DiscoverCard'
 import {useParams} from 'react-router-dom'
-import axios from 'axios';
+import api from '../api/api.js'
 
 function Profile() {
   const {id} = useParams();
@@ -13,7 +13,7 @@ function Profile() {
   useEffect (() => {
     async function fetchProfile() {
       try {
-        const response = await axios.get(`http://localhost:3000/api/profile/${id}`);
+        const response = await api.get(`/api/profile/${id}`);
         console.log("Profile Data:", response.data);
          setProfile({ ...response.data, posts: response.data.posts || [] });
       } catch (err) {

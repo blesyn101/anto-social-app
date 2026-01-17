@@ -12,7 +12,7 @@ function Feed() {
   return (
     <div className='p-4 pb-24'>
     {/* Header */}
-    <div className="Header flex items-center mb-4 px-1">
+    <div className="md:hidden Header flex items-center mb-4 px-1">
       <NavLink className="search-bar"><img src={searchIcon} className='nav-icon'></img></NavLink>
       <div className="logo-text font-bold text-center"><h2>ANTO</h2></div>
       <NavLink className="userIcon"><img src={userIcon} className='nav-icon'></img></NavLink>
