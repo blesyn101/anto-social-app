@@ -1,8 +1,11 @@
 import React from 'react'
+import ProfileCard from './ProfileCard'
 
 function LeftSideBar() {
   return (
-    <div>LeftSideBar</div>
+    <div>
+        < ProfileCard />
+    </div>
   )
 }
 
